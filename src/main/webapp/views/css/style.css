@@ -1,0 +1,43 @@
+
+.hide{
+	display: none;
+}
+.show
+{
+    display:block;
+}
+.align-left{
+	text-align: left;
+}
+.margintop-neg18{
+	margin-top: -18px;
+}
+.body-container {
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
+.code-row{
+	padding-left: inherit;
+    color: wheat;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #504b4b;
+}
+.container p{
+	margin-bottom: 1rem;
+}
+.align-center{
+	text-align: center
+}
+@media (max-width: 767px) {
+  .container{
+    padding-left: 0px;
+  }
+}
+/* .dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown>.dropdown-toggle:active {
+  Without this, clicking will make it sticky
+    pointer-events: none;
+} */

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd"> 
+<tiles-definitions>
+    <definition name="base.definition" template="/views/tiles/layout/baseLayout.jsp"> 
+	    <put-attribute name="title" value="" />  
+	    <put-attribute name="navbar" value="/views/jsp/navbar.jsp" />
+	    <put-attribute name="body" value="" />  
+    	<put-attribute name="footer" value="/views/jsp/footer.jsp" /> 
+    </definition>
+     <definition name="course.definition" template="/views/tiles/layout/courseLayout.jsp"> 
+	    <put-attribute name="title" value="/views/jsp/title.jsp" />  
+	    <put-attribute name="navbar" value="/views/jsp/navbar.jsp" />
+	    <put-attribute name="body" value="" />  
+	    <put-attribute name="links" value="/views/jsp/course/links.jsp" />  
+    	<put-attribute name="footer" value="/views/jsp/footer.jsp" /> 
+    </definition>
+    <definition name="error.definition" template="/views/tiles/layout/errorLayout.jsp">  
+        <put-attribute name="title" value="Error" />  
+        <put-attribute name="navbar" value="/views/jsp/navbar.jsp" />
+        <put-attribute name="body" value="" /> 
+        <put-attribute name="footer" value="/views/jsp/footer.jsp" />
+    </definition>
+    <definition name="empty.definition" template="/views/tiles/layout/emptyLayout.jsp">
+        <put-attribute name="body" value=""/>  
+    </definition>
+    
+    <definition name="home" extends="base.definition"> 
+    	<put-attribute name="title" value="Home"/>  
+        <put-attribute name="body" value="/views/jsp/home.jsp"/>  
+    </definition>
+    <definition name="contactus" extends="base.definition"> 
+    	<put-attribute name="title" value="Contact-Us"/>  
+        <put-attribute name="body" value="/views/jsp/contactus.jsp"/>  
+    </definition> 
+    <definition name="writewithus" extends="base.definition"> 
+    	<put-attribute name="title" value="Contact-Us"/>  
+        <put-attribute name="body" value="/views/jsp/writewithus.jsp"/>  
+    </definition>   
+    <definition name="course.page" extends="course.definition">  
+        <put-attribute name="body" value="/views/jsp/course/home.jsp"/>
+    </definition>
+     <definition name="course.content" extends="course.definition">
+        <put-attribute name="body" value="/views/jsp/course/home.jsp"/>  
+    </definition>
+    <definition name="loginReg" extends="empty.definition">  
+        <put-attribute name="body" value="/views/jsp/loginRegModal.jsp"/>  
+    </definition>
+    <definition name="closeSSOLoginWindow" extends="empty.definition">  
+        <put-attribute name="body" value="/views/jsp/closeSSOLoginWindow.jsp"/>  
+    </definition>  
+	<definition name="service.list" extends="base.definition">  
+     	<put-attribute name="title" value="Services"/> 
+        <put-attribute name="body" value="/views/jsp/service/serviceList.jsp"/>  
+    </definition>  
+    <definition name="service.pincode" extends="base.definition">  
+     	<put-attribute name="title" value="Location-Service"/> 
+        <put-attribute name="body" value="/views/jsp/service/pincode.jsp"/>  
+    </definition>
+    <definition name="error" extends="base.definition">  
+        <put-attribute name="body" value="/views/jsp/error.jsp" />  
+    </definition>
+     <definition name="error.course" extends="empty.definition">
+        <put-attribute name="body" value="/views/jsp/error.jsp" />  
+    </definition>
+</tiles-definitions>  
