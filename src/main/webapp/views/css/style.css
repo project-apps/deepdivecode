@@ -23,6 +23,10 @@
     padding-bottom: 10px;
     background-color: #504b4b;
 }
+.container{
+	padding-bottom: 30px;
+	margin-bottom: 10px;
+}
 .container p{
 	margin-bottom: 1rem;
 }

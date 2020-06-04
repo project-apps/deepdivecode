@@ -1,7 +1,6 @@
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %> 
 
-<section class="features13 cid-rZxRyLyoi0" id="features13-13">
-    <div class="container">
+<section class="cid-rZxRyLyoi0">
         <h2 class="mbr-section-title pb-3 mbr-fonts-style align-center display-2">
            Learn technology with professionals.
         </h2>
@@ -58,5 +57,10 @@
                 </div>
             </div>    
         </div>
-    </div>
+        
+   <figure class="mbr-figure align-center container">
+        <div class="video-block row">
+            <div class="card-wrap"><iframe src="https://www.youtube.com/embed/1taEjHS8vMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+   </figure>
 </section>

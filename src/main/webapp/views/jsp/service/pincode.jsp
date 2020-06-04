@@ -3,7 +3,7 @@
     <%@ page session="true"%> <%@ page isELIgnored="false"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
     <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
-     <div class="container" style="padding-bottom: 50px;">
+     <div class="container" style="padding-bottom: 50px; padding-top: 20px;">
         <div class="row justify-content-center">
             <div class="title col-12 col-lg-8">
                 <h2 class="align-center pb-2 mbr-fonts-style display-2">
@@ -27,14 +27,37 @@
             	</div>
             </div>
         </div>
+        
         <form:form action="pincode" modelAttribute="pincodeDto" method="GET">
-        <div class="dragArea row form-inline justify-content-center">
+        	<div class="dragArea row">
+                        <div class="col-md-4  form-group" data-for="name">
+                            <label for="name-form1-v" class="form-control-label mbr-fonts-style display-7">Pincode</label>
+                            <form:input cssClass="form-control display-7" placeholder="Enter pincode" path="pincode" required="required"/>
+                        </div>
+                        <div class="col-md-4  form-group" data-for="email">
+                            <label for="email-form1-v" class="form-control-label mbr-fonts-style display-7">Record Type</label>
+	                        <form:select path="dataView" cssClass="form-control display-7">
+					        	<form:option value="0" label="All"/>
+					        	<form:option value="1" label="Single"/>
+						    </form:select>
+                        
+                        </div>
+                        <div class="col-md-4 input-group-btn" style="align-self: flex-end;padding-bottom: 16px;">
+                            <button type="submit" class="form-control btn btn-primary m-0 display-4" style="height: auto;">Submit</button>
+                        </div>
+                    </div>
+                    
+		</form:form>   
+        
+        
+        <%-- <form:form action="pincode" modelAttribute="pincodeDto" method="GET">
+        <div class="row form-inline justify-content-center">
         	<div class="col-auto  form-group">
-        	<label for="pincode-form1-v" class="form-control-label mbr-fonts-style">Pincode</label>
+        		<label for="pincode-form1-v" class="form-control-label mbr-fonts-style">Pincode: </label>
         		<form:input cssClass="form-control input-sm input-inverse my-2 display-7" placeholder="Enter pincode" path="pincode" required="required"/>
         	</div>
         	<div class="col-auto  form-group">
-        	<label for="pincode-form1-r" class="form-control-label mbr-fonts-style">Record Type</label>
+        		<label for="pincode-form1-v" class="form-control-label mbr-fonts-style">Record Type: </label>
         		<form:select path="dataView" cssClass="form-control input-sm input-inverse my-2 display-7">
 		        	<form:option value="0" label="All"/>
 		        	<form:option value="1" label="Single"/>
@@ -44,8 +67,9 @@
         	<div class="col-auto  input-group-btn  m-2">
             	<button type="submit" class="btn btn-primary m-0 display-4">Submit</button>
             </div>
+        
         </div>
-        </form:form>
+        </form:form> --%>
       
 	<c:if test="${pincodeJSON ne null}">
 	<section class="features3 cid-rZxSxtf7AD" id="features3-1b">
@@ -68,3 +92,4 @@
 	</section>
 </c:if>
 </div>
+<script src='<c:url value="/views/assets/formoid/formoid.min.js"/>'></script>

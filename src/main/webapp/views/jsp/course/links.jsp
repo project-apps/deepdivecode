@@ -54,6 +54,12 @@
 	function formatMenu(name){
 		name = name.split('.')[0];
 		name = name.charAt(0).toUpperCase()+name.slice(1);
+		name = removeSpclChars(name);
 		return name;
 	}
+	function removeSpclChars(data){
+		data = data.split('-').join(' ')
+		return data;
+	}
+	
 </script>

@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href='<c:url value="/views/images/logo-md-black-bold.gif"/>' type="image/x-icon">
   <meta name="description" content="">
   
-  <title>Deepdivecode | <tiles:insertAttribute name="title" ignore="true"/></title>
+  <title><tiles:insertAttribute name="title" ignore="true"/> | Deepdivecode</title>
   <link rel="stylesheet" href="<c:url value='/views/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css'/>"/>
   <link rel="stylesheet" href="<c:url value='/views/assets/web/assets/mobirise-icons/mobirise-icons.css'/>"/>
   <link rel="stylesheet" href="<c:url value='/views/assets/bootstrap/css/bootstrap.min.css'/>"/>
@@ -34,9 +34,7 @@
 	<tiles:insertAttribute name="navbar" />
 </div>
 <div class="container-fluid">
-	<div class="container">
 		<tiles:insertAttribute name="body" />
-	</div>
 </div>
 <div class="modal-container"></div>
 <div class="footer-container">

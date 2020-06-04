@@ -39,8 +39,8 @@ public class ServiceController extends AbstractGenericController {
 		try {
 			
 			if(!StringUtils.isEmpty(pincodeDto.getPincode())) {
-				UriComponents uriComponents= UriComponentsBuilder.fromUriString(propReader.getPropValue(WebAppConstants.PINCODE_URI))
-						.path(WebAppConstants.PINCODE_URI).path("/").path(pincodeDto.getDataView()).path("/").path(pincodeDto.getPincode()).build();
+				UriComponents uriComponents= UriComponentsBuilder.fromPath(WebAppConstants.PINCODE_URI)
+						.path("/").path(pincodeDto.getDataView()).path("/").path(pincodeDto.getPincode()).build();
 				responseEntity = apiCallService.exchange(uriComponents);
 				mv.addObject("pincodeJSON", responseEntity.getBody());
 			}
