@@ -1,5 +1,5 @@
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
-<section class="footer4 cid-rZxS3GvxQm" id="footer4-18">
+<section class="cid-rZxS3GvxQm">
     <div class="container">
         <div class="media-container-row content mbr-white">
             <div class="col-md-3 col-sm-4">
