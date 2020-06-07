@@ -116,7 +116,6 @@
 				      </div>
     			</ul>   
           	</li>
-               	
            <li class="nav-item">
                <c:choose>
              	<c:when test="${sessionScope.authuser ne null}">
@@ -140,8 +139,8 @@
 			  	 <span class="mbri-logout mbr-iconfont mbr-iconfont-btn"></span>Logout</a>
 			   </div>
 		 	  </div>
-         </li>
+           </li>
 		</ul>
-        </div>
+       </div>
     </nav>
 </section>
