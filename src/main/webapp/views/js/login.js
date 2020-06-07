@@ -1,6 +1,10 @@
 /**
- * 
+ * File for only login helpers.
  */
+if (!jQuery) {throw new TypeError("jQuery is required.");};
+(function ($, window, document, undefined) {
+	'use strict';
+
 var popupWindow;
 $('.ssoLogin').click(function(e){
 	e.preventDefault();
@@ -13,12 +17,11 @@ $('.ssoLogin').click(function(e){
 		}
 		
 	}).fail(function(data){
-		console.log(data);
+		alert(data);
 		_this.closest('form').find('.errorSpan').empty().append(data).css('visibility','visible');
 	});
 	
 });
-//var _this;
 $('#loginForm').submit(function(e){
 	e.preventDefault();
 	var _this = $(this);
@@ -69,20 +72,23 @@ $('#signupForm').submit(function(e){
 		_this.closest('form').find('.errorSpan').empty().append(JSON.stringify(data)).css('visibility','visible');
 	});
 });
-var loginSuccess = (authUserFirstLastName, source)=>{
-	if(source=='social'){
+
+})(jQuery, window, document);
+
+function loginSuccess(authUserFirstLastName, source){
+	if(source.toUpperCase()==='SOCIAL'){
 		var opener = window.opener;
 		if(opener){
 			opener.$('.loginRegModal').modal('toggle');
-			opener.$('#logginRegModalGenerator').closest('li').addClass('hide');
-			opener.$('.user-toogle').removeClass('hide');
+			opener.$('#logginRegModalGenerator').parent('div').addClass('hide');
 			opener.$('div.user-toogle > a.dropdown-toggle').html(authUserFirstLastName);
+			opener.$('.user-toogle').removeClass('hide');
 		}
 	}else{
 		$('.loginRegModal').modal('toggle');
-		$('#logginRegModalGenerator').closest('li').addClass('hide');
-		$('.user-toogle').removeClass('hide');
+		('#logginRegModalGenerator').addClass('hide');
 		$('div.user-toogle > a.dropdown-toggle').html(authUserFirstLastName);		
+		$('.user-toogle').removeClass('hide');
 	}
 	
 }

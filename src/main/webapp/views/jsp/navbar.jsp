@@ -117,46 +117,31 @@
     			</ul>   
           	</li>
                	
-               	
-               	
-               	
-               	
-               	
-               	
-               	
-               	
-               	
-               	
-               	
-               	
-               	
-	           <li class="nav-item">
-	               <c:choose>
-	             	<c:when test="${sessionScope.authuser ne null}">
-	             		<div class="nav-item dropdown user-toogle">
-	             		<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">${sessionScope.authuser.name}</a>
-	             	</c:when>
-	              <c:otherwise>
-	               <a class="nav-link link text-white display-4" href="<c:url value='/loginReg'/>" id="logginRegModalGenerator" data-toggle="modal">
-	               	<span class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span>Login</a>
-	              	<%-- <a class="nav-link" href="<c:url value='/loginReg'/>" id="logginRegModalGenerator" data-toggle="modal">Login|Register&nbsp;<i class="fas fa-sign-in-alt"></i></a> --%>
-	              	<div class="nav-item dropdown user-toogle hide">
-	              	<a href="#" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-	              </c:otherwise>
-	             </c:choose>
-	               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-				    <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i>Profile</a>
-				    <a class="dropdown-item" href="#"><i class="fas fa-tools"></i>Settings</a>
-				    <div class="dropdown-divider"></div>
-				  	<a href="<c:url value="/logout"/>"class="dropdown-item"><i class="fas fa-sign-out-alt"></i>Logout</a>
-				</div>
-				</div>
-	         </li>
-               	
-               	
-               	<<!-- li class="nav-item"><a class="nav-link link text-white display-4" href="#">
-               		<span class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span>Login</a></li> -->
-            </ul>
+           <li class="nav-item">
+               <c:choose>
+             	<c:when test="${sessionScope.authuser ne null}">
+               <div class="nav-item dropdown user-toogle">
+             		<a class="nav-link link text-white dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="false">
+                    	${sessionScope.authuser.name}
+                	</a>
+             	</c:when>
+              <c:otherwise>
+               <div>
+               <a class="nav-link link text-white display-4" href="<c:url value='/loginReg'/>" id="logginRegModalGenerator" data-toggle="modal">
+               	<span class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span>Login</a></div>
+              <div class="nav-item dropdown user-toogle hide">
+              	<a class="nav-link link text-white dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="false"></a>
+              </c:otherwise>
+             </c:choose>
+               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+			    <a class="text-white dropdown-item display-4" href="#"><span class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>Profile</a>
+			    <a class="text-white dropdown-item display-4" href="#"><span class="mbri-setting mbr-iconfont mbr-iconfont-btn"></span>Settings</a>
+			  	<a class="text-white dropdown-item display-4" href="<c:url value="/logout"/>"><i class="fas fa-sign-out-alt"></i>
+			  	 <span class="mbri-logout mbr-iconfont mbr-iconfont-btn"></span>Logout</a>
+			   </div>
+		 	  </div>
+         </li>
+		</ul>
         </div>
     </nav>
 </section>

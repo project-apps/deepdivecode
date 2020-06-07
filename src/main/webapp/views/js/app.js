@@ -2,16 +2,6 @@ if (!jQuery) {throw new TypeError("jQuery is required.");};
 (function ($, window, document, undefined) {
 	'use strict';
 
-	/*$('#loginModal').click(function(e){
-		e.preventDefault();
-		$.ajax({
-			url:$(this).attr('href'),
-		}).done(function(response){
-			$('#modal').empty().html(response);
-			$('#loginRegModal').modal('show');
-		});
-	});
-*/
 	$('#logginRegModalGenerator').click(function(e){
 		e.preventDefault();
 		$.ajax({

@@ -60,7 +60,8 @@
         
    <figure class="mbr-figure align-center container">
         <div class="video-block row">
-            <div class="card-wrap"><iframe src="https://www.youtube.com/embed/1taEjHS8vMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="card-wrap"><!-- <iframe src="https://www.youtube.com/embed/1taEjHS8vMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            </div>
         </div>
    </figure>
 </section>
